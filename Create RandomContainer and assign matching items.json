@@ -1,0 +1,35 @@
+{
+    "version":2,
+    "commands":[
+      {
+        // Please refer to https://www.audiokinetic.com/library/edge/?source=SDK&id=defining__custom__commands.html
+        "id": "jeppe.Flashbulb.SmartRandomContainer",
+        "displayName": "Smart Random Container",
+        "program": "${CurrentCommandDirectory}\\SmartRandomContrainer.pyw",
+        "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
+        "args": "${path}",
+        "defaultShortcut": "R",
+        "contextMenu": {
+
+          "basePath": "WAAPI",
+
+          "enabledFor": "Sound,ActorMixer,SwitchContainer,RandomSequenceContainer"
+
+        }
+      },
+
+      {
+        "id": "jeppe.Flashbulb.RandomPitch",
+        "displayName": "Random Pitch",
+        "program": "${CurrentCommandDirectory}\\RandomPitch.pyw",
+        "args": "${id}",
+        "defaultShortcut": "P",
+        "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
+        "contextMenu": {
+          "basePath": "WAAPI",
+          "enabledFor": "Sound,ActorMixer,RandomSequenceContainer,BlendContainer,SwitchContainer"
+        }
+      }
+
+    ]
+}
